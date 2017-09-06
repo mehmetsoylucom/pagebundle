@@ -1,0 +1,9 @@
+Basefony\PageBundle\Entity\Page:
+    page_{1..50}:
+         title: <sentence()>
+         slug (unique): <slug(6,true)>
+         content: <paragraphs(4,true)> <paragraphs(4,true)>
+         createdAt: <dateTime()>
+         updatedAt: <dateTime()>
+         #random user
+         user:  '@user_*'

@@ -1,0 +1,27 @@
+# Admin
+
+Basefony_admin_page_index:
+      path:     /admin/page
+      defaults: { _controller: BasefonyPageBundle:Admin:index }
+
+Basefony_admin_page_add:
+      path:     /admin/page/add
+      defaults: { _controller: BasefonyPageBundle:Admin:add }
+
+Basefony_admin_page_delete:
+      path:     /admin/page/delete/{id}
+      defaults: { _controller: BasefonyPageBundle:Admin:delete }
+
+Basefony_admin_page_edit:
+      path:     /admin/page/edit/{id}
+      defaults: { _controller: BasefonyPageBundle:Admin:edit }
+
+Basefony_admin_page_search:
+      path:     /admin/page/search
+      defaults: { _controller: BasefonyPageBundle:Admin:search }
+
+# Front
+
+Basefony_front_page_show:
+      path:     /sayfa/{slug}
+      defaults: { _controller: BasefonyPageBundle:Front:show }

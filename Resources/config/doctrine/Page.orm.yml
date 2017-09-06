@@ -1,0 +1,44 @@
+Basefony\PageBundle\Entity\Page:
+    type: entity
+    table: Basefony_page
+    repositoryClass: Basefony\PageBundle\Repository\PageRepository
+
+    manyToOne:
+        user:
+            targetEntity: Basefony\UserBundle\Entity\User
+            inversedBy: pages
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        meta_title:
+            type: string
+            length: 255
+            nullable: TRUE
+        meta_keywords:
+            type: string
+            length: 255
+            nullable: TRUE
+        meta_description:
+            type: string
+            length: 255
+            nullable: TRUE
+        slug:
+            type: string
+            length: 255
+        content:
+            type: text
+        createdAt:
+            type: datetime
+        updatedAt:
+            type: datetime
+    lifecycleCallbacks: {  }

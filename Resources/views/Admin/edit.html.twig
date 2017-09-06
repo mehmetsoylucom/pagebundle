@@ -1,0 +1,42 @@
+{# Admin menu add #}
+
+{% extends '@BasefonyAdmin/container.html.twig' %}
+
+{% block header %}
+
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <h1><span class="fa fa-edit"></span> Sayfa düzenle</h1>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+            {% include '@BasefonyPage/Admin/menu.html.twig' %}
+        </div>
+    </div>
+{#
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="breadcrumb">
+                <li><span class="fa fa-edit"></span> <a href="{{ url('Basefony_admin_page_index') }}">Sayfalar</a></li>
+                <li>Düzenle</li>
+            </ul>
+        </div>
+    </div>
+#}
+
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            {% set download_uri = false %}
+            {{ form(form) }}
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block javascript %}
+    {% include '@BasefonyPage/Admin/js.html.twig' %}
+{% endblock %}

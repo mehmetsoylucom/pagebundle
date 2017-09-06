@@ -1,0 +1,9 @@
+{% extends '@BasefonyApp/container.html.twig' %}
+
+{% block meta_title %}{{ page.metaTitle|default(site_name) }}{% endblock %}
+{% block meta_description %}{{ page.metaDescription|default(site_name) }}{% endblock %}
+{% block meta_keywords %}{{ page.metaKeywords|default(site_name) }}{% endblock %}
+
+{% block content %}
+    {{ page.content|raw }}
+{% endblock %}
