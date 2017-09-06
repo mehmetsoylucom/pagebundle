@@ -1,7 +1,7 @@
 # README 
 
 ## PageBundle
-Sayfa yonetimini yapan submodule bundle.
+Page content management bundle for basefony.
 
 ## Dir Path 
 src/Basefony/PageBundle
