@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-6">
-            <h1><span class="fa fa-edit"></span> Sayfalar</h1>
+            <h1><span class="fa fa-edit"></span> {{ 'Pages'|trans }}</h1>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6 text-right">
             {% include '@BasefonyPage/Admin/menu.html.twig' %}
@@ -41,17 +41,21 @@
                 <td width="1%">
                     {{ page.id }}
                 </td>
-                <td>
+                <td onClick="window.location='{{ url('basefony_admin_page_edit', {id:page.id}) }}'">
                     <a href="{{ url('basefony_admin_page_edit', {id:page.id}) }}" class="text-primary">{{ page.title }}</a>
                 </td>
-                <td>
-                    <span class="btn-group btn-group-xs pull-right">
-                    <a href="{{ url('basefony_admin_page_edit', {'id':page.id}) }}"
-                       class="btn btn-primary btn-sm"><span class="fa fa-edit"></span></a>
+                <td width="20%" nowrap="">
+                    <span class="btn-group btn-group-sm pull-right">
+                        <a href="{{ url('basefony_admin_page_edit', {'id':page.id}) }}"
+                           class="btn btn-primary" title="{{ 'Edit'|trans }}">
+                            <span class="fa fa-edit"></span>
+                        </a>
 
-                    <a href="{{ url('basefony_admin_page_delete', {'id':page.id}) }}"
-                       onClick="return confirm('Emin misiniz?');"
-                       class="btn btn-danger btn-sm"><span class="fa fa-remove"></span></a>
+                        <a href="{{ url('basefony_admin_page_delete', {'id':page.id}) }}"
+                           onClick="return confirm('{{ 'Are you sure?'|trans }}');"
+                           class="btn btn-danger" title="{{ 'Delete'|trans }}">
+                            <span class="fa fa-remove"></span>
+                        </a>
                     </span>
                 </td>
             </tr>
