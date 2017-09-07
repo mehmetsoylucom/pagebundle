@@ -40,7 +40,7 @@ class PageType extends AbstractType
                     */
             ->add('user', Select2EntityType::class, [
                 'multiple' => false,
-                'remote_route' => 'Basefony_admin_user_search_ajax',
+                'remote_route' => 'basefony_admin_user_search_ajax',
                 'class' => 'Basefony\UserBundle\Entity\User',
                 'primary_key' => 'id',
                 'text_property' => 'email',
@@ -72,6 +72,6 @@ class PageType extends AbstractType
      */
     public function getName()
     {
-        return 'Basefony_admin_page';
+        return 'basefony_admin_page';
     }
 }

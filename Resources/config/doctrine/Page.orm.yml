@@ -1,6 +1,6 @@
 Basefony\PageBundle\Entity\Page:
     type: entity
-    table: Basefony_page
+    table: basefony_page
     repositoryClass: Basefony\PageBundle\Repository\PageRepository
 
     manyToOne:

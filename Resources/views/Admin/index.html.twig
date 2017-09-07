@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <form action="{{ url('Basefony_admin_page_search') }}" method="get">
+            <form action="{{ url('basefony_admin_page_search') }}" method="get">
                 <input type="text" name="keyword" class="form-control pull-left input-sm" style="max-width: 250px">
                 <input type="submit" value="Bul" class="btn btn-sm btn-primary pull-left">
             </form>
@@ -42,14 +42,14 @@
                     {{ page.id }}
                 </td>
                 <td>
-                    <a href="{{ url('Basefony_admin_page_edit', {id:page.id}) }}" class="text-primary">{{ page.title }}</a>
+                    <a href="{{ url('basefony_admin_page_edit', {id:page.id}) }}" class="text-primary">{{ page.title }}</a>
                 </td>
                 <td>
                     <span class="btn-group btn-group-xs pull-right">
-                    <a href="{{ url('Basefony_admin_page_edit', {'id':page.id}) }}"
+                    <a href="{{ url('basefony_admin_page_edit', {'id':page.id}) }}"
                        class="btn btn-primary btn-sm"><span class="fa fa-edit"></span></a>
 
-                    <a href="{{ url('Basefony_admin_page_delete', {'id':page.id}) }}"
+                    <a href="{{ url('basefony_admin_page_delete', {'id':page.id}) }}"
                        onClick="return confirm('Emin misiniz?');"
                        class="btn btn-danger btn-sm"><span class="fa fa-remove"></span></a>
                     </span>

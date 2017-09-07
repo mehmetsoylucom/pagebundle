@@ -7,5 +7,5 @@ Page content management bundle for basefony.
 src/Basefony/PageBundle
 
 ## Routing.yml
-Basefony_page:
+basefony_page:
     resource: "@BasefonyPageBundle/Resources/config/routing.yml"

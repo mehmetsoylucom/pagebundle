@@ -101,7 +101,7 @@ class AdminController extends BaseController
 
             $this->addFlash('success','Sayfa eklendi.');
 
-            return $this->redirectToRoute('Basefony_admin_page_index');
+            return $this->redirectToRoute('basefony_admin_page_index');
         }
 
         return $this->render('BasefonyPageBundle:Admin:add.html.twig', [
@@ -127,7 +127,7 @@ class AdminController extends BaseController
 
         $this->addFlash('success','Sayfa silindi.');
 
-        return $this->redirectToRoute('Basefony_admin_page_index');
+        return $this->redirectToRoute('basefony_admin_page_index');
     }
 
     /**
@@ -154,7 +154,7 @@ class AdminController extends BaseController
             $em->flush();
 
             $this->addFlash('success','Sayfa düzenlendi.');
-            return $this->redirectToRoute('Basefony_admin_page_index');
+            return $this->redirectToRoute('basefony_admin_page_index');
         }
 
         return $this->render('BasefonyPageBundle:Admin:edit.html.twig', [
