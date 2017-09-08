@@ -1,8 +1,18 @@
 {% trans_default_domain 'messages' %}
-<div class="col-md-3  col-sm-6">
-    <h4><span class="fa fa-file-text"></span> {{ 'Pages'|trans }}</h4>
+
+<div class="col-md-3 col-sm-6">
+    <h3 class="mt10">
+        <span class="fa fa-file-text"></span>
+        {{ 'Pages'|trans }}
+    </h3>
     <ul class="list-group">
-        <li class="list-group-item"><span class="fa fa-list"></span>  <a href="{{ url('basefony_admin_page_index') }}">Sayfa Listesi</a></li>
-        <li class="list-group-item"><span class="fa fa-plus"></span> <a href="{{ url('basefony_admin_page_add') }}">Sayfa Ekle</a></li>
+        <li class="list-group-item">
+            <span class="fa fa-plus-square"></span>
+            <a href="{{ url('basefony_admin_page_add') }}">{{ 'Add'|trans }}</a>
+        </li>
+        <li class="list-group-item">
+            <span class="fa fa-list"></span>
+            <a href="{{ url('basefony_admin_page_index') }}">{{ 'Pages'|trans }}</a>
+        </li>
     </ul>
 </div>
