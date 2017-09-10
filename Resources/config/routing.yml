@@ -23,5 +23,5 @@ basefony_admin_page_search:
 # Front
 
 basefony_front_page_show:
-      path:     /sayfa/{slug}
+      path:     /page/{slug}
       defaults: { _controller: BasefonyPageBundle:Front:show }

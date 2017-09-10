@@ -20,6 +20,12 @@
 
 {% block content %}
     <div class="row">
+        <div class="col-md-12 text-right">
+            <a href="{{ url('basefony_front_page_show',{'slug':form.vars.value.slug}) }}">{{ 'Show in site'|trans }}</a>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-md-12">
             {% set download_uri = false %}
             {{ form(form) }}
