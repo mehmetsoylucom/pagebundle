@@ -12,10 +12,6 @@ class SiteController extends BaseController
      */
     public function showAction($slug)
     {
-        if (!$slug) {
-            throw $this->createNotFoundException('Page not found');
-        }
-
         $em = $this->getDoctrine()->getManager();
         $page = $em->getRepository('BasefonyPageBundle:Page')->findOneBy(['slug'=>$slug]);
 

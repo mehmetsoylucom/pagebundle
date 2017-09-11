@@ -1,9 +1,6 @@
-{# Admin menu add #}
-
 {% extends '@BasefonyAdmin/container.html.twig' %}
 
 {% block header %}
-
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-6">
             <h1>
@@ -15,27 +12,25 @@
             {% include '@BasefonyPage/Admin/menu.html.twig' %}
         </div>
     </div>
-
 {% endblock %}
 
 {% block content %}
 
     <div class="row">
         <div class="col-md-12 text-right">
-            <input type=text value="{{ url('basefony_front_page_show',{'slug':form.vars.value.slug}) }}" readonly="readonly"><br>
+            <input type="text" value="{{ url('basefony_front_page_show', {'slug':form.vars.value.slug}) }}" readonly="readonly">
+            <br>
             <a href="{{ url('basefony_front_page_show',{'slug':form.vars.value.slug}) }}">{{ 'Show in site'|trans }}</a>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-12">
-            {% set download_uri = false %}
             {{ form(form) }}
         </div>
     </div>
 
 {% endblock %}
-
 
 {% block javascript %}
     {% include '@BasefonyPage/Admin/js.html.twig' %}

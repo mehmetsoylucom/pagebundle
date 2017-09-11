@@ -15,6 +15,10 @@ use Vich\UploaderBundle\Form\Type\VichImageType;
 use Tetranz\Select2EntityBundle\Form\Type\Select2EntityType;
 use Basefony\UserBundle\BasefonyUserBundle;
 
+/**
+ * Class PageType
+ * @package Basefony\PageBundle\Form
+ */
 class PageType extends AbstractType
 {
     /**
@@ -26,13 +30,32 @@ class PageType extends AbstractType
         $buttonName = $options['data']->getId() > 0 ? 'Edit' : 'Add';
 
         $builder
-            ->add('title', TextType::class, ['label' => 'Page Name', 'required' => true])
-            ->add('meta_title', TextType::class, ['label' => 'Meta Title', 'required' => true])
-            ->add('meta_keywords', TextType::class, ['label' => 'Meta Keywords', 'required' => true])
-            ->add('meta_description', TextareaType::class, ['label' => 'Meta Description', 'required' => true])
-            ->add('slug', TextType::class, ['label' => 'URL Slug', 'required' => true])
-            ->add('content', TextareaType::class,
-                ['label' => 'Content', 'required' => false, 'attr' => ['class' => 'ckeditor']])
+            ->add('title', TextType::class, [
+                'translation_domain' => 'messages',
+                'label' => 'Page Name',
+                'required' => true
+            ])
+            ->add('meta_title', TextType::class, [
+                'label' => 'Meta Title',
+                'required' => true
+            ])
+            ->add('meta_keywords', TextType::class, [
+                'label' => 'Meta Keywords',
+                'required' => true
+            ])
+            ->add('meta_description', TextareaType::class, [
+                'label' => 'Meta Description',
+                'required' => true
+            ])
+            ->add('slug', TextType::class, [
+                'label' => 'URL Slug',
+                'required' => true
+            ])
+            ->add('content', TextareaType::class, [
+                'label' => 'Content',
+                'required' => false,
+                'attr' => ['class' => 'ckeditor']
+            ])
             ->add('user', Select2EntityType::class, [
                 'multiple' => false,
                 'remote_route' => 'basefony_admin_user_search_ajax',
@@ -48,8 +71,10 @@ class PageType extends AbstractType
                 'language' => 'tr',
                 'placeholder' => 'User',
             ])
-            ->add('submit', SubmitType::class, ['label' => $buttonName, 'attr' => ['class' => 'btn btn-primary']]);
-
+            ->add('submit', SubmitType::class, [
+                'label' => $buttonName,
+                'attr' => ['class' => 'btn btn-primary']
+            ]);
     }
 
     /**

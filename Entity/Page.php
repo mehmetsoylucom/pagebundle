@@ -6,7 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Pages
+ * Class Page
+ * @package Basefony\PageBundle\Entity
  */
 class Page
 {

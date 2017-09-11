@@ -10,6 +10,7 @@
             {% include '@BasefonyPage/Admin/menu.html.twig' %}
         </div>
     </div>
+    <hr class="mt0 mb5">
     <div class="row">
         <div class="col-md-6">
             <form action="{{ url('basefony_admin_page_search') }}" method="get">
@@ -17,13 +18,12 @@
                 <input type="submit" value="Bul" class="btn btn-sm btn-primary pull-left">
             </form>
         </div>
-        <div class="col-md-6"></div>
     </div>
+
 {% endblock %}
 
 {% block content %}
 
-    {# menus #}
     <table class="table table-hover table-responsive">
         <thead>
         <tr style="font-weight: bold">
@@ -42,7 +42,8 @@
                     {{ page.id }}
                 </td>
                 <td onClick="window.location='{{ url('basefony_admin_page_edit', {id:page.id}) }}'">
-                    <a href="{{ url('basefony_admin_page_edit', {id:page.id}) }}" class="text-primary">{{ page.title }}</a>
+                    <a href="{{ url('basefony_admin_page_edit', {id:page.id}) }}"
+                       class="text-primary">{{ page.title }}</a>
                 </td>
                 <td width="20%" nowrap="">
                     <span class="btn-group btn-group-sm pull-right">
@@ -63,9 +64,7 @@
         </tbody>
     </table>
 
-    {# PAGINATION #}
-
-    <div class="navigation">
+    <div id="pagination" class="navigation" >
         {{ knp_pagination_render(pagination) }}
     </div>
 
