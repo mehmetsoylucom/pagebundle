@@ -10,8 +10,7 @@ use Basefony\PageBundle\Entity\Page;
 class AdminController extends BaseController
 {
     /**
-     * Show pages
-     *
+     * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function indexAction(Request $request)
@@ -41,8 +40,7 @@ class AdminController extends BaseController
     }
 
     /**
-     * Search pages
-     *
+     * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function searchAction(Request $request)
@@ -75,8 +73,6 @@ class AdminController extends BaseController
     }
 
     /**
-     * Add page
-     *
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
@@ -111,8 +107,7 @@ class AdminController extends BaseController
     }
 
     /**
-     * Delete page
-     *
+     * @param Page $page
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function deleteAction(Page $page)
@@ -131,10 +126,9 @@ class AdminController extends BaseController
     }
 
     /**
-     * Edit page
-     *
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function editAction(Request $request, $id)
     {

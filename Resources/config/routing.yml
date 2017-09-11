@@ -20,6 +20,8 @@ basefony_admin_page_search:
       path:     /admin/page/search
       defaults: { _controller: BasefonyPageBundle:Admin:search }
 
+# Member
+
 # Front
 
 basefony_front_page_show:

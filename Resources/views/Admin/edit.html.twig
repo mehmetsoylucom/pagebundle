@@ -19,8 +19,10 @@
 {% endblock %}
 
 {% block content %}
+
     <div class="row">
         <div class="col-md-12 text-right">
+            <input type=text value="{{ url('basefony_front_page_show',{'slug':form.vars.value.slug}) }}" readonly="readonly"><br>
             <a href="{{ url('basefony_front_page_show',{'slug':form.vars.value.slug}) }}">{{ 'Show in site'|trans }}</a>
         </div>
     </div>

@@ -4,11 +4,9 @@ namespace Basefony\PageBundle\Controller;
 
 use Basefony\AppBundle\Controller\BaseController;
 
-class FrontController extends BaseController
+class SiteController extends BaseController
 {
     /**
-     * Show page
-     *
      * @param $slug
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -25,7 +23,7 @@ class FrontController extends BaseController
             throw $this->createNotFoundException('Page not found');
         }
 
-        return $this->render('BasefonyPageBundle:Front:show.html.twig',[
+        return $this->render('BasefonyPageBundle:Site:show.html.twig',[
             'page' => $page
         ]);
     }
