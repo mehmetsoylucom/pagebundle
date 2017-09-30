@@ -1,6 +1,7 @@
 {% extends '@BasefonyAdmin/container.html.twig' %}
 
 {% block header %}
+    {% include '::ckeditor.js.html.twig' %}
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-6">
             <h1>
@@ -33,5 +34,10 @@
 {% endblock %}
 
 {% block javascript %}
-    {% include '@BasefonyPage/Admin/js.html.twig' %}
+    <script type="text/javascript">
+        var onReady = function() {
+            slugify.bind(document.getElementById('page_title'), document.getElementById('page_slug'));
+        };
+        document.addEventListener('DOMContentLoaded', onReady, false);
+    </script>
 {% endblock %}

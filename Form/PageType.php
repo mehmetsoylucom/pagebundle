@@ -35,6 +35,10 @@ class PageType extends AbstractType
                 'label' => 'Page Name',
                 'required' => true
             ])
+            ->add('slug', TextType::class, [
+                'label' => 'URL Slug',
+                'required' => true
+            ])
             ->add('meta_title', TextType::class, [
                 'label' => 'Meta Title',
                 'required' => true
@@ -45,10 +49,6 @@ class PageType extends AbstractType
             ])
             ->add('meta_description', TextareaType::class, [
                 'label' => 'Meta Description',
-                'required' => true
-            ])
-            ->add('slug', TextType::class, [
-                'label' => 'URL Slug',
                 'required' => true
             ])
             ->add('content', TextareaType::class, [
