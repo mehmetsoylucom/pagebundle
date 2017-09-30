@@ -137,7 +137,7 @@ class AdminController extends BaseController
 
         if (!$page) {
             throw $this->createNotFoundException(
-                'No product found for id ' . $id
+                'Not found for id ' . $id
             );
         }
 
@@ -147,7 +147,7 @@ class AdminController extends BaseController
         if ($form->isValid()) {
             $em->flush();
 
-            $this->addFlash('success','Sayfa düzenlendi.');
+            $this->addFlash('success','Düzenlendi.');
             return $this->redirectToRoute('basefony_admin_page_index');
         }
 
